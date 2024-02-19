@@ -1,0 +1,109 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #e6e6e6;
+  --glitch-orange: #ffae00;
+  --glitch-pink: #7e03aa;
+  --glitch-blue: #00fffb;
+  --soft-blue: #afffff;
+
+
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+}
+
+@font-face {
+font-family: "Pixel";
+src: url(/assets/fonts/PixelifySans-Regular.ttf);
+}
+
+@font-face {
+font-family: "Pixel2";
+src: url(/assets/fonts/Tektur-Regular.ttf);
+}
+
+
+body {
+  background: 
+  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,rgba(115, 3, 171, 0.597) 54% 57%,#0000 59%) 0 calc(128px/2),
+  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,rgba(135, 3, 171, 0.563) 54% 57%,#0000 59%) calc(128px/2) 0,
+  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,rgba(98, 3, 171, 0.571) 54% 57%,#0000 59%),
+  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,rgba(171, 3, 132, 0.45) 54% 57%,#0000 59%),
+  #1e1e1e;
+background-size: calc(128px/4.667) 128px,128px calc(128px/4.667);
+;
+}

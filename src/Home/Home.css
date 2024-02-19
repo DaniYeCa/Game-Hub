@@ -1,0 +1,196 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  font-family: "Pixel";
+  font-size: 40px;
+  text-shadow: 2px 2px 4px var(--glitch-orange);
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  gap: 1rem;
+}
+
+.home {
+  margin-top: 30px;
+}
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* .home-btn {
+  --border-color: linear-gradient(-45deg, var(--glitch-orange), var(--glitch-pink), var(--glitch-blue));
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #1e1e1e;
+  --color: #afffff;
+  color: var(--color);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 15px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.6);
+  clip-path: polygon(
+      0% var(--curve-size),
+      var(--curve-size) 0,
+      100% 0,
+      100% calc(100% - var(--curve-size)),
+      calc(100% - var(--curve-size)) 100%,
+      0 100%
+  );
+  transition: color 250ms;
+  font-family: "Pixel2";
+}
+
+.home-btn::after,
+.home-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.home-btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+      background-position: 31% 0%;
+  }
+
+  50% {
+      background-position: 70% 100%;
+  }
+
+  100% {
+      background-position: 31% 0%;
+  }
+} */
+/* .home-btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+      var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+      calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+      var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+} */
+/* .home-btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+      calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.home-btn:where(:hover, :focus) {
+  color: var(--text-color);
+} */
+
+
+@media screen and (min-width: 768px) {
+  .navbar ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .home {
+    margin-top: 60px;
+  }
+
+  .home-btn {
+    font-size: 15px;
+  }
+}
